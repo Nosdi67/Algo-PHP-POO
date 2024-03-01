@@ -13,15 +13,24 @@ complète d’un auteur <p><br>
 <?php
 
 spl_autoload_register(function ($class_name) {
-    include 'Classes/'. $class_name . '.php';
+    require 'Classes/'. $class_name . '.php';
 });
 
 
-$auteur1= new Auteur("Stepehn King");
-$livre1= new Livre($auteur1,"Ca ", " (1986) ", " 1338 pages "," / 20€ ");
+$auteur1= new Auteur("Stepehn","King");
+$livre1= new Livre($auteur1," Ca ", 1986, 1338 ,20);
+$livre2= new Livre($auteur1, " Simetierre ", 1983, 374, 15);
+$livre3= new Livre($auteur1," Le Fléau",1978, 823, 14);
+$livre4= new Livre($auteur1," Shining ",1977, 447, 16);
 
-echo $auteur1->getAuteur();
-echo $livre1->getinfo();
+echo $livre1->getInfo();
+echo $livre2->getInfo();
+echo $livre3->getInfo();
+echo $livre4->getInfo();
+
+getBibliothèque($auteur1);
+
+
 
 
 ?>
