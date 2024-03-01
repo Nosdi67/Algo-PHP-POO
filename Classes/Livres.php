@@ -1,6 +1,6 @@
 <?php
 
-class Livres{
+class Livre{
 
 private string $_auteur;
 private string $_nom;
@@ -28,7 +28,7 @@ private int $_prix;
 
     public function getInfo(){
 
-        return $this->_auteur . $this->_année. ;
+        return $this->_auteur .$this->_nom. $this->_année. $this->_nbDePages. $this->_prix. $this->_année  ;
     }
 }
 

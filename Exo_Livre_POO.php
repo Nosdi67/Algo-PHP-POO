@@ -21,7 +21,7 @@ $auteur1= new Auteur("Stepehn King");
 $livre1= new Livre($auteur1,"Ca ", " (1986) ", " 1338 pages "," / 20€ ");
 
 echo $auteur1->getAuteur();
-
+echo $livre1->getinfo();
 
 
 ?>
