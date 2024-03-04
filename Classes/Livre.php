@@ -63,7 +63,7 @@ private Auteur $_auteur;
  public function __toString(){
 
         return $this->_nomLivre. " (" . $this->_année. ") : ". $this->_nbDePages." pages / " . $this->_prix . "€" .'<br>' ;
- }    // to string pour renvoyer tout ces info d'un coup lors de l'appel
+ }    // to string pour renvoyer tout ces info d'un coup lors de l'appel via $this
 }
 	
 
