@@ -17,7 +17,8 @@ private Auteur $_auteur;
         $this->_année = $_année;
         $this->_nbDePages = $_nbDePages;
         $this->_prix = $_prix;
-        $this->_livre
+        $this->_auteur->addLivres($this); /* on dis que l'attribut auteur va stocker les livres et 
+                                            le this va justement chercher les objets Livres qu'on a*/
         
     }
 
@@ -39,15 +40,11 @@ private Auteur $_auteur;
     public function getAuteur(): Auteur {return $this->auteur;}
 
     
-    public function getInfo(){ 
+    public function getInfo(){ //un get info pour tout recuperer s'il faut
         
     return $this->_nomLivre. " (" . $this->_année. ") : ". $this->_nbDePages." pages / " . $this->_prix . "€" .'<br>' ;}
 
     
-    public function getBibliothèque(Auteur $Nomauteur){
-
-        return '<strong>' . "Les livres de ". $auteur1->getAuteur . '</strong>';
-    }
     
     
 //**********************************************SETTERS**************************************************************************************
@@ -61,7 +58,12 @@ private Auteur $_auteur;
 	public function setAuteur(Auteur $auteur): void {$this->auteur = $auteur;}
 
    
-    
+
+//***********************to String************************************
+ public function __toString(){
+
+        return $this->_nomLivre. " (" . $this->_année. ") : ". $this->_nbDePages." pages / " . $this->_prix . "€" .'<br>' ;
+ }    // to string pour renvoyer tout ces info d'un coup lors de l'appel
 }
 	
 

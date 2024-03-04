@@ -18,17 +18,21 @@ spl_autoload_register(function ($class_name) {
 
 
 $auteur1= new Auteur("Stepehn","King");
+
 $livre1= new Livre($auteur1," Ca ", 1986, 1338 ,20);
 $livre2= new Livre($auteur1, " Simetierre ", 1983, 374, 15);
 $livre3= new Livre($auteur1," Le Fléau",1978, 823, 14);
 $livre4= new Livre($auteur1," Shining ",1977, 447, 16);
 
-echo $livre1->getInfo();
-echo $livre2->getInfo();
-echo $livre3->getInfo();
-echo $livre4->getInfo();
+// echo $livre1->getInfo();
+// echo $livre2->getInfo();
+// echo $livre3->getInfo();
+// echo $livre4->getInfo();
 
-getBibliothèque($auteur1);
+echo $auteur1->afficherLivres();
+
+
+
 
 
 
